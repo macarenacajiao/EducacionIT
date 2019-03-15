@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<div id="respuestas" style="color:pink;background-color:#4C2C60;font-family:arial">
+			Respuestas aqui <!--contenido del div-->
+	</div>
+
+	<script>
+		var suma, resta, multiplicacion, division, numeroUno, numeroDos;
+
+		//Pedir número 1 y numero 2
+		numeroUno = Number (prompt ("Ingrese el primer numero")); // lo almacenamos en número 1
+		numeroDos = Number (prompt ("Ingrese el segundo numero")); // lo almacenamos en número 2
+
+		//Realizar la suma
+		suma = numeroUno + numeroDos; 
+		//Realizar la resta 
+		resta = numeroUno - numeroDos; 
+		//Realizar la multiplicacion
+		multiplicacion = numeroUno * numeroDos; 
+		//Realizar la division
+		division = numeroUno / numeroDos; 
+
+		/*alert ("El resultado de la suma es: "+ suma);
+		
+		alert ("El resultado de la resta es: "+ resta);
+		
+		alert ("El resultado de la multiplicacion es: "+ multiplicacion);
+	
+		alert ("El resultado de la division es: "+ division);*/
+
+		/*console.log(document.getElementById("respuestas").innerHTML); //Inspeccionar-->Console*/
+
+		document.getElementById("respuestas").innerHTML="La suma es: "+suma+"<br>La resta es: "+resta+"<br>La multiplicacion es: "+multiplicacion+"<br>La division es: "+division;
+	</script>
+</body>
+</html>
+<!-- la funcion Number sirve para parsear todos los números-->
+<!-- la calculadora en la versión 1.0 mostraba los resultados mediante cuadros de dialogo, la v1.1 imprime en la página web -->
+<!-- document es un objeto Javascript-->
