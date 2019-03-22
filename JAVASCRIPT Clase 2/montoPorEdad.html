@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monto por Edad</title>
+	<meta charset="utf-8"> <!--el charset es el conjunto de carcateres que voy a utilizar, utf es para caracteres latinos-->
+</head>
+<body>
+	<script type="text/javascript">
+		var continuar=true; /*le asignamos el valor booleano (true) para ver si es cierto y contnuar la ejecucion*/
+		do{
+			var monto, edad, interes, total, tipoFactura, interesPorTipo;
+
+			edad= Number (prompt("Ingrese su edad"));
+			monto= Number (prompt("Ingrese el monto de la factura"));
+			tipoFactura = prompt ("Ingrese el tipo de factura (A, B o C)").toUpperCase(); /*setea el texto itroducido a mayusculas para que en el Switch no tire el alert*/
+			
+			switch(tipoFactura){
+				case "A":
+					interesPorTipo=monto*0.2;
+				break;
+				case "B":
+					interesPorTipo=monto*0.1;
+				break;
+				case "C":
+					interesPorTipo=monto*0.05;
+				break;
+				default:
+					alert("Ingrese el tipo correcto");
+				break;
+			}
+
+			if(edad<18){
+				interes= monto*0.05; /*calculamos el 5% del interes*/
+				total=monto+interes;
+			}else if (edad>=18 && edad<=35){
+				interes= monto*0.24; /*calculamos el 24% del interes*/
+				total=monto+interes;
+			}else if (edad>=35 && edad<=45){
+				interes= monto*0.20; /*calculamos el 20% del interes*/
+				total=monto+interes;
+			}else if (edad>=45 && edad<=90){
+				interes= monto*0.15; /*calculamos el 15% del interes*/
+				total=monto+interes;
+			}
+			total =total + interesPorTipo;
+			alert ("Total: "+total+" | Interes: "+interes);
+			continuar = confirm ("¿Desea continuar?");
+		}while(continuar); /*continuar queda como una variable temporal en memoria*/
+	</script>
+
+</body>
+</html>
+
+<!--.toLowerCase()
+	.toUpperCase()-->
+<!--el bloque do while sirve para asegurar al menos una vuelta el bucle-->
+<!-- hacer un lobby -->
