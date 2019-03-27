@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacto</title>
+	<meta charset="utf-8"> <!--el charset es el conjunto de carcateres que voy a utilizar, utf es para caracteres latinos-->
+	
+	<style type="text/css">
+		body, header, nav, main, footer, h1, ul.menu{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-family:'century gothic', helvetica, sans-serif; /*se ponen distitnas opciones dependiendo del navegador*/
+
+		}
+		header, nav, footer{
+			color: lightgrey;
+			background-color:#192168; 
+		}
+		
+		ul.menu li{
+			display:inline;
+			padding: 0px 5px 0px 5px;
+		} /*selecciona a cualquier elemento que pertenezca a la categoria menu*/
+
+		ul.menu li:hover{
+			background-color: rgba(100, 50, 200, 0.5); /* 0.5 me dice que es semitransparente*/
+		}
+		
+		a{
+			color: lightgrey;
+			text-decoration: none;
+
+		}
+
+		form{
+			background-color: grey;
+			color: white;
+			width: 300px;
+			margin: auto; /*calcula automaticamente el margen derecho e izquierdo*/
+			margin-top: 50px;
+			padding: 5px 0px 5px 100px; /*top right bottom left*/
+			border-radius: 15px;
+			box-shadow: 10px 10px 15px black; /*valor 1: derecha, valor 2: hacia abajo, valor 3: difuminado, valor 4: color*/ 
+		}
+
+		input, textarea, select{
+			width:200px;
+			resize: none;
+		}
+
+		.opcion{
+			width: 20px;
+		} /*opcion le digo a cualquier elemento que pertenezca a la categoria opcion*/
+		
+		label{
+			text-shadow: 1px 1px 0.5px black;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Formularios</h1>
+	</header>
+
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="galeria.html">Galería</a></li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+	</nav>
+
+	<main>
+	<form action="mailto:makicajiao@hotmail.com" method="post"> <!-- en el action tengo que poner la ruta de mi archivo php, le dice al servidor que autoenvie un correo -->
+		<label for="nombre">Nombre: </label> <!--la etiqueta para el campo nombre, despues se crea un input-->
+		<br>
+		<input type="text" name="nombre" placeholder="Nombre y apellido">
+		<br>
+		<label for="correo">Correo: </label>
+		<br>
+		<input type="email" name="email" placeholder="Ingrese una dirección de correo válida">
+		<br>
+		<label for="consulta">Consulta: </label>
+		<br>
+		<textarea type="consulta" placeholder="Escriba su consulta aquí"></textarea>
+		<br>
+		<label for="sexo">Sexo:</label>
+		<br>
+		<input class="opcion" type="radio" name="sexo" value="M">Masculino
+		<br>
+		<input class="opcion" type="radio" name="sexo" value="F">Femenino
+		<br>
+		<input class="opcion" type="radio" name="sexo" value="O">Otro
+		<br>
+		<label for="actividades">Actividades: </label>
+		<br>
+		<input class="opcion" type="checkbox" name="actividades" value="1">
+		Cine 
+		<br>
+		<input class="opcion" type="checkbox" name="actividades" value="2">
+		Música 
+		<br>
+		<input class="opcion" type="checkbox" name="actividades" value="3">
+		Deportes 
+		<br>
+		<label for="continente">Región: </label>
+		<select name="continente"> <!--abre un menú desplegable para elegir una opcion-->
+			<option value="01">África</option>
+			<option value="02">América</option>
+			<option value="03">Asia</option>
+			<option value="04">Europa</option>
+			<option value="05">Oceanía</option>
+		</select>
+		<br>
+		
+		<input type="submit" name="enviar"> <!--el atributo value le da un nombre al boton-->
+		
+	</form> <!--si no está dentro de la etiqueta de formulario no se envia a ningun lado-->
+	</main>
+	
+	<footer>
+		<p>&copy; <!--signo de derechos reservados--> Todos los derechos reservados<br>Macarena Cajiao &amp; <!--sigo de ampersan--> compañia</p>
+	</footer>
+	
+</body>
+</html>
+
+<!--Formulario de consulta, registro, sesión, búsqueda -->
+<!--atributo action, que sucede al enviar, atributo method, como se envia, existen dos method, get(menos seguro, se ve en la barra de direcciones y capacidad de 8kb (8mil caracteres) o post (es más seguro, la informacion se codifica o se encripta, no muestra la informacion en la barra de direcciones y capacidad de 8mb )  -->
+<!--types para input: mail(igual que el texto pero pide que sea una estructura válida de correo), text (es un cuadro), number (cuadro para ingresar numero), date (me va a mostrar un almanaque), password (cuadro que muestra ****), radio (para tildar la casilla correcta, una sola opcion), checkbox (para tildar la casilla correcta, varias opciones), submit (enviar), reset (reestablecer) (dependiendo del navegador cambia)-->
