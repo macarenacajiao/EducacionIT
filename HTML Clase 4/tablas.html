@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagenes</title>
+	<meta charset="utf-8"> <!--el charset es el conjunto de carcateres que voy a utilizar, utf es para caracteres latinos-->
+	<style type="text/css">
+		body, header, nav, main, footer{
+			margin:0;
+			padding:0;
+			border:0;
+		}
+		p{
+			color: black;
+			background-color:lightgrey;
+			font-family: monospace;
+		}
+		header, footer{
+			color:lightgrey;
+			background-color:darkblue;
+			font-family:fantasy;
+			padding: 20px;
+			text-align: center;
+		}
+		.menu li{
+			display: inline-block;
+			margin-right: 20px;		
+		}
+		/* esta regla va a afectar a todos los li cuyo padre esta en una clase menu*/
+		.menu li:hover{
+			background-color:#99CC33;
+		}/*el hover implica el color de fondo que va a tomar cuando el mouse pasa por encima*/
+		
+		a{
+			color:white;
+			text-decoration: none;
+		}
+		nav{
+			background-color: rgb(60, 100, 200);
+			text-align: center;
+		}
+		main p{
+			background-color: lightblue;
+			color: black;
+			padding:20px;
+			margin:30px;
+			border-radius: 10px;
+		}
+		.tabla{
+			margin: 1em auto;
+		}
+		.tableHeader{
+			color:lightgrey;
+			background-color:darkblue;
+			font-family:fantasy;
+			text-align: center;
+		}
+		.tableRow{
+			color: black;
+			background-color:lightgrey;
+			font-family: monospace;
+			text-align: center;
+		}
+		.frame{
+			margin: 1em auto;
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Aprendiendo HTML</h1>
+		<p>CSS y mucho mas!</p>
+	</header>
+	
+	<nav>
+		<ul class="menu"> <!-- le creamos una clase a el padre-->
+			<li> <a href="tablas.html"> Inicio </a></li>
+			<li> <a href="#"> Galería </a></li> <!-- el caracter numeral refresca la página-->
+			<li> <a href="https://es-la.facebook.com/EducacionIT/"> Contacto </a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JS</li>
+		</ul>
+		<hr>
+		<table class="tabla">
+		<th colspan="4" class="tableHeader">CURSOS 2019</th>
+		<tr class="tableRow">
+			<td>Nombre del curso</td>
+			<td>Duración del curso</td>
+			<td>Costo del Curso</td>
+			<td>Modalidad</td>
+			</tr><!---->
+			<tr class="tableRow">
+				<td>Javascript</td>
+				<td>5 Clases</td>
+				<td>1000 pesos</td>
+				<td>Distancia-Presencial</td>
+				</tr><!---->
+				<tr class="tableRow">
+					<td>HTML CSS3</td>
+					<td>5 Clases</td>
+					<td>1500 pesos</td>
+					<td>Presencial</td>
+					</tr><!-- tr: table row (columna); td: table data cell (celda); th: table header (titulo de la tabla) -->
+				</table>
+		<hr>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0687157584216!2d-58.37805708519521!3d-34.60242386493577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n+IT!5e0!3m2!1ses-419!2sar!4v1554386620684!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="frame"></iframe> <!--carga una pagina dentro de mi pagina-->
+		<hr>
+	</main>
+	<footer>
+		<p>&copy; <!--signo de derechos reservados--> Todos los derechos reservados<br>Macarena Cajiao &amp; <!--sigo de ampersan--> compañia</p>
+	</footer>
+</body>
+</html>
