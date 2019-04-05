@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="respuesta"></div>
+
+	<script type="text/javascript">
+		var arrayPrecioNuevo=[], arrayPrecioAnterior=[], arrayAumento=[];/*así se reconocen como arrays*/
+		
+		do{
+			var precioAnterior= Number(prompt("Ingrese el precio anterior:"));
+			var aumento=(precioAnterior*0.21)/12;
+			var precioNuevo=precioAnterior+aumento;
+
+			arrayPrecioNuevo.push(precioNuevo);
+			arrayPrecioAnterior.push(precioAnterior);
+			arrayAumento.push(aumento);
+			
+			continuar= confirm("¿Desea ingresar un nuevo producto?");
+		}while(continuar);
+		var htmlTabla="<table><tr><td>Precio Original</td><td>Precio Nuevo</td><td>Aumento</td></tr>"
+		for (var i=0; i < arrayAumento.length; i++){
+			htmlTabla += "<tr><td>"+arrayPrecioAnterior[i]+"</td><td>"+arrayPrecioNuevo[i]+"</td><td>"+arrayAumento[i]+"</td></tr>"; /**/ 
+		}
+		htmlTabla+="</table>";
+		document.getElementById("respuesta").innerHTML=htmlTabla; /*se refiere a <div id="respuesta">Arrays</div> que esta arriba del <script>*/
+
+	</script>
+	</table>
+
+</body>
+</html>
+
+<!--Objeto: conjunto de propiedades
+	switch: ejecuta una acción distinta según el valor que tuviese una variable.
+	do while: Ejecuta la primera iteración y luego evalúa la condición necesaria para iterar.
+	while: Primero evalúa la condición y después ejecuta la iteración.
+	if: si.. entonces. Si se cumple una condición, ejecuta el código entre llaves.
+	if...else: Te permite optar por dos caminos. Si la condición se cumple o si no.
+	if... elseif... else: Te permite optar por más de dos caminos posibles.
+	for: for (inicio; condición; incremento)
+	arr.push(agrega uno o más elementos al final del array)
+	arr.pop(elimina el último elemento)
+	JSON (Javascript Object Notation)-->
+
