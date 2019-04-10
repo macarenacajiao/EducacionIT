@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface|Varela+Round');
+
+body{
+	color:#333;
+	font-family: 'Varela Round', sans-serif;
+	background-color: hsl(33, 94%, 97%);
+
+}
+#tituloGeneral{
+	/*el tamaño d elos h1 està definido por el navegador*/
+	/*font-family: 'Varela Round', sans-serif;*/
+	font-family: 'Abril Fatface', cursive;
+	font-weight: bold; /*0 al 900, salteando del 100 e 100 o bold y bolder*/
+	font-variant: small-caps;
+	text-transform: uppercase; /*lowercase capitalize*/
+	color: #b71c1c;
+	text-align: center; /*left right center justify text align last*/
+	line-height:50px;
+	word-spacing: 4px;
+}
+nav{
+	text-align: center;
+}
+
+
+/*Selectores
+*: selector de menor jerarquía, se aplica a toda la página.
+de tipo o etiqueta, por ejemplo body
+de clase, se representa con un punto
+de ID, se representa con el # y el id del elemnto que queremo afectar
+de pseudo clase, se utiliza para definir u estado especial de un elemento. se identifica con la etiqueta , los: y el estado del elemento 
+:hover(todos los elementos)
+:active(todos los elementos)
+:link(propio de los links)
+:visited(propio de los links)
+
+Elementos
+Atributo display: inline linea
+				  block bloque
+
+Si llega a fallar o caer el servidor podemos llamar a Open Sans como respaldo
+*/
