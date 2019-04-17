@@ -1,0 +1,59 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	/*los valores van al orden de las agujas del reloj, 
+	primero top, right, bottom, left
+			top/bottom  right/left
+	margin: 10 px       15px;
+			
+			top  left/right bottom 
+	margin: 10px 15px       20px;
+		   
+		   top  left right bottom    
+	margin:10px 10px 10px  10px; 
+	si ponemos un solo valor ese va a ser para los cuatro atributos
+	
+	lo mismo para las font (los valores font size y font family son obligatorios)
+	font:[ <font-style> || <font-variant> || <font-weight> ]? <font-size> [ / <line-height> ]? <font-family>
+	
+	a todo esto se le llama shorthand
+	*/
+}
+.caja01{
+	width:100%; /*es 100% del elemento padre*/
+	height:100px;
+	background-color: #333;
+	/*margin: 10px; /*margen externo*/
+	padding: 10px; /*margen interno*/
+	/*en este caso se quita el margen para que la
+	barra de scroll horizontal no aparezca*/
+	color: white; /*esto me permite flotar
+	 los elementos hacia la izquierda*/
+}
+.caja02{
+	width:40%; /*es 100% del elemento padre*/
+	height:100px;
+	background-color: #333;
+	/*margin: 10px; /*margen externo*/
+	padding: 10px; /*margen interno*/
+	/*en este caso se quita el margen para que la
+	barra de scroll horizontal no aparezca*/
+	color: white;
+	float:left; /*esto me permite flotar
+	los elementos hacia la izquierda*/
+}
+span{
+	width: 200px;
+	height: 50px;
+	background-color:darkgreen;
+	padding: 10px;
+	margin: 10px;
+}
+
+/*en este caso no se me genera la barra de scroll horizontal ya que toma todo
+cuando agrego margin o padding si me la agrega, y no veo el objeto por completo
+la propiedad clear frena el flotado, se encarga de y toma tres valores, left right y both
+por defecto siempre lo preseteamos en both
+*/

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+/*resetear el css
+	es un código pre hecho que se encarga de 
+	borrar todos los estilos de todos los navegadores*/
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
+*{
+	box-sizing: border-box;
+}
+header{
+	width: 100%;
+	height: 150px; /*130 de contenido, más 10 de padding top, más 10 de padding bottom*/
+	background-color:#ffcdd2;
+	padding: 10px;
+	line-height: 130px;
+	background-image: url(fondo.png);
+	background-repeat: repeat-x;/*no-repeat repeat-y repeat-x*/
+	background-size: 13px; /*cover (aplica el 100% de ancho, se asegura de que la imagen lo ocupe) contain ()*/
+	background-position: 169px 136px; /*recibe dos parametros, eje x y eje y*/
+}
+nav{
+
+	float: right;
+}
+h1{
+	float: left;
+	margin: 0;
+
+}
+body{
+	margin:0; 
+	font-family: 'Merriweather', serif;
+	color:#333;
+}
+main{
+	/*min width y max width*/
+	width: 90%;
+	background: #cb9ca1;
+	margin: auto;
+	/*altura mínima y máxima*/
+	min-height: 500px;
+	max-height: 600px;
+	padding: 10px;
+}
+img {
+	width:200px;
+	float:left;
+	margin-right: 10px;
+}
+footer{
+	background-color:#ffebee;
+	clear: both; /*frena ambos flotados*/
+	height: 100px;
+	color: #333;
+	line-height: 100px;
+	text-align:center;
+}
