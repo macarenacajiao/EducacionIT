@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+*{
+	box-sizing: border-box;
+}
+main{
+	font-family: 'Lato', sans-serif;
+}
+header img{
+	background-color:#d1c4e9; 
+	font-family: 'Lato', sans-serif;
+}
+body{
+	margin:0;
+
+}
+.section img{
+	width: 100%;
+	padding: 10px; 
+}
+.fondoSectionOne{
+	background-color:#9575cd; 
+}
+.fondoSectionTwo{
+	background-color: #b39ddb;
+}
+.fondoSectionThree{
+	background-color:#d1c4e9; 
+}
+footer{
+	
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
