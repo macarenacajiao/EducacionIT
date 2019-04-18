@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styleIndex.css">
+	<title>Ejemplo JS</title>
+</head>
+<body>
+	<h1>Hola JS!</h1>
+	<script type="text/javascript">
+		console.log("Hola");
+		let nombre="Macarena";
+		console.log("Hola!"+nombre);//concatenar strings
+		console.log(`Hola! ${4*5}`);//template strings
+		
+		/*console.info ("Info");
+		console.warn ("Warn");
+		console.error ("Error");*/
+
+		//Variables y operadores
+		nombre= "Macarena"; /*no puedo llamar a let dos veces*/
+		let edad= 23;
+		let dni=12345678;
+		const esUsuario=true;
+		console.log(nombre, edad, dni, esUsuario);
+		//Arrays y objetos
+		const amigos =["Lucas", "Belén", "Leandro"];
+		amigos.push("nuevo amigo"); /*agrega elementos en tiempo de ejecución*/
+		console.log(amigos);
+
+		const miCompra={
+			id: 123,
+			cliente:01,
+			nombre:"Mario",
+			monto:1000,
+			moneda: "USD",
+			valido: true
+		}
+
+		/*miCompra.localidad="CABA";
+		console.log("miCompra: ", miCompra);
+		for (var i =0 ; i < amigos.length; i >= 0; i++) {
+			amigos[i];
+		}*/
+
+		//Recorrer arrays en JS
+		amigos.forEach(function(item, index){
+			console.log("Amigo: ", item);
+		});
+
+	</script>
+</body>
+</html>
