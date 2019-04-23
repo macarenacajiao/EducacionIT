@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Demo JS</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<script>
+			let h1 = document.querySelector("h1");
+			h1.innerText= "Cambio";
+			/*siempre dejar el script abajo usando Vanilla*/
+			let p = document.querySelectorAll("p");
+			p.innerText= "Cambio cambio";
+			//console.log(p);
+			
+			//uso del forEach
+			/*p.forEach(function(item, index){
+				item.innerText="Parrafo Nro"+index;
+			})*/
+			
+			/*lo mismo pero usando arrow functions o lambda (solo podemos sacar los parentesis cuando tenemos un solo parametro, en este caso NO)*/
+			p.forEach((item, index)=>{item.innerText="Parrafo Nro"+index;})
+
+			/*agregar elementos*/
+			let body=document.querySelector("body");
+			let div=document.createElement("div"); //el elemento se crea en la memoria, no se renderiza en pantalla
+			div.id="div1";
+			div.innerText="Soy un nuevo div! :)";
+			body.appendChild(div); //agregar un hijo más al nodo
+		</script>
+	</body>
+</html>

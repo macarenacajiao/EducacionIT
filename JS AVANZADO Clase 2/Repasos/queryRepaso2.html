@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo JS</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.alerta{
+				color: #333;
+				background-color: lightpink ;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="alerta">Demo JS</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<script>
+			/*Controlando elementos desde el DOM*/
+			/*Crear elemento a que apunte a https://www.educacionit.com
+				Contenedor: primer parrafo
+			*/
+			let p1=document.querySelector("p");
+			let a=document.createElement("a"); /*el elemento se crea en la memoria, no se renderiza en pantalla*/
+			a.href="https://www.educacionit.com";
+			a.innerText = "Click Me!";
+			p1.appendChild(a); //agregar un hijo más al nodo
+			//opción fácil
+			//p1.innerHTML +="<a href='https://www.educacionit.com'>Educación IT</a>" /*+= es concatenar*/
+
+			/*Estilos CSS*/
+			p1.classList.add("alerta");
+			/*p1.classList.remove("alerta");*/
+		</script>
+	</body>
+</html>
