@@ -1,0 +1,48 @@
+#contenedor{
+	width: 100%;
+	height: 600px;
+	border: 1px solid blue;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap; /**/
+	/*flex-direction: column-reverse;*/
+}
+#contenedor div{
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+}
+#destacado{
+	align-self: flex-end;
+}
+	/*podemos trabajar alineación:
+		- justify-content (alineación horizontal)
+		center -> centra horizontalmente a los elementos
+		space-between -> entre medio de mis divs va a haber espacios proporcionales div_div_div
+		space-around -> genera espacios en mis contenedores
+		space evenly -> genera una estructura similar al anterior, pero siempre vamos
+		a tener el mismo espacio proporcional
+		
+		- alignt-items (alineación vertical)
+		center -> pone en el centro a los elementos (divs)
+		flex-start -> principio de flex, equivale al top
+		flex-end -> final de flex, equivale al bottom
+		
+		align-self -> es la única propiedad que se aplica a los hijos del flex
+		toma los mismos valores que align items
+		
+		- flex-direction
+		row -> valor por defecto el padre se comporta como sifuese una fila y todos los elementos hijo
+		column -> justify content (VERTICAL), align-items (HORIZONTAL)
+		rota la dirección del flex y sus alineaciones
+		en el caso del ejercicio el contenedor padre limita a los divs hijos, y los achica, entonces para que
+		funcione bien deberiamos agrandar la caja padre
+		row-reverse -> se comporta como una fila pero invierte el orden de los elementos en el html
+		column-reverse -> cambia el orden de los elementos en el html
+		
+		- flex-wrap
+		no wrap: valor por defecto
+		wrap: ayuda a mantener a los hijos
+		wrap-reverse: ajusta el contenido e invierte el orden de los elementos en el html
+	*/
