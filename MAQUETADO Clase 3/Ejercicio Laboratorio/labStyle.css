@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+/*-----reset-----*/
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	font-family: 'Playfair Display', serif;
+	color:#333;
+	background-color: #eee;
+}
+/*-----header-----*/
+header{
+	background-color: lightgrey;
+	display: flex; /*debo darle este atributo para trabajar de forma fluida*/	 
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 200px;
+}
+
+h1{
+	margin:0;
+	width: 160px;
+	text-align: center;
+	background-color:yellow;
+}
+
+nav{
+	align-self:flex-start;	
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	width: 150px;
+	height: 110px;
+}
+
+a{
+	display: block;
+	width: 100%;
+	height: 30px;
+	background: #333;
+	text-align: center;
+	line-height: 30px;
+	text-decoration: none;
+	color: white;
+	font-variant: small-caps;
+	transition: background-color .5s;
+}
+
+a:hover{
+	color: #333;
+	background-color: yellow;
+}
+
+/*-----main-----*/
+#contenedor{
+	width: 90%
+	background-color: #eee;
+	margin: auto;
+	padding: 10px;
+	margin-top: 10px; /*lo separa del header*/
+	display: flex;
+	justify-content: center;
+	font-size: small;
+} /*contenedor padre*/
+
+#contenedor div{
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	background-color: tomato;
+	margin-right: 10px;
+}
+
+#contenedor div:last-child{
+	margin-right:0px;
+	background-color: lightblue;
+}
+
+#contenedor p:first-letter{
+	font-size: 30px;
+	font-weight: bold;
+	color: yellow;
+}
