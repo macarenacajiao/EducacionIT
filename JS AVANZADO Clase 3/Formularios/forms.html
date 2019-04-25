@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contacto</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/formStyle.css">
+	</head>
+	<body>
+		<header>
+			<h1>Formularios</h1>
+		</header>
+		<main>
+			<form action="https://www.ole.com.ar" method="post" novalidate>
+				<input type="text" name="user" placeholder="Ingrese usuario" required/>
+				<br>
+				<input type="password" name="password" placeholder="Ingrese contraseña" required/>
+				<br>
+				<input type="number" name="dni" placeholder="Ingrese su DNI" required/>
+				<br>
+				<input type="submit" name="enviar"/>
+			</form>
+		</main>
+		<script src="./js/formsJs.js"></script>
+	</body>
+</html>
+
+<!--poner novalidate dentro de form para que los mensajes de error del navegador por defecto no salten-->

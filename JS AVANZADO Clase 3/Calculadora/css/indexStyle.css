@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Cute+Font');
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	font-family: 'Cute Font', cursive;
+	color:#333;
+	background-color: lightpink;
+	text-align: center;
+
+}
+
+#contenedor{
+	width: 25%;
+	background-color: lightpink;
+}
+
+#botones{
+	font-family: 'Cute Font', cursive;
+	color:#333;
+}
+
+
+
