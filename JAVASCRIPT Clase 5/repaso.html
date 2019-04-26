@@ -1,0 +1,43 @@
+<!--
+	Crear una interfaz con los siguientes elementos:
+		-Campo de texto llamado "nombre"
+		-Campo de texto llamado "edad"
+		-Boton
+		-Tabla con cabeceras "Nombre" y "Edad"
+	... y con estos eventos
+		-Al hacer click en botón, agregar una nueva fila a la tabla con los campos de cada input
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="nombre" placeholder="Nombre...">
+	<input type="text" id="edad" placeholder="Edad...">
+	<button onclick="agregar(
+			document.getElementById('nombre').value,
+			Number(document.getElementById('edad').value)
+	);">Agregar</button>
+	<br><br>
+	<table border="1" cellpadding="0" cellspacing="0" id="tabla">
+		<tr>
+			<td>Nombre</td>
+			<td>Edad</td>
+		</tr>
+		<tr>
+			<td>NUEVO-NOMBRE</td>
+			<td>NUEVA-EDAD</td>
+		</tr>
+	</table>
+	<script>
+		function agregar(nombre, edad) {
+			var filas = document.getElementById("tabla").innerHTML;
+			var nuevaFila = "<tr> <td>"+nombre+"</td> <td>"+edad+"</td> </tr>";
+			document.getElementById("tabla").innerHTML=filas+nuevaFila;
+			console.log(filas+nuevasFila);
+		}
+	</script>
+</body>
+</html>
