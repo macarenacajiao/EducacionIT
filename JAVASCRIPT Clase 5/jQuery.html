@@ -1,0 +1,53 @@
+<!--
+	Crear una interfaz con los siguientes elementos:
+		-Campo de texto llamado "nombre"
+		-Campo de texto llamado "edad"
+		-Boton
+		-Tabla con cabeceras "Nombre" y "Edad"
+	... y con estos eventos
+		-Al hacer click en botón, agregar una nueva fila a la tabla con los campos de cada input
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+</head>
+<body>
+	<input type="text" id="nombre" placeholder="Nombre...">
+	<input type="text" id="edad" placeholder="Edad...">
+	<button>Agregar</button>
+	<br><br>
+	<table id="tabla">
+		<thead>
+			<th>Nombre</th>
+			<th>Edad</th>
+		</thead>
+		<tbody>
+			
+		</tbody>
+		<tfoot>
+			
+		</tfoot>
+	</table>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script>
+			$(document).ready(function(){
+					var miTabla = $("#tabla").DataTable();
+					$("button").on("click", function(){
+					miTabla.row.add([
+						$("#nombre").val(),
+						$("#edad").val()
+						]).draw();	
+					$("#tabla").fadeIn();					
+				});/*necesitamos cerrar porque el on es un metodo*/
+			});
+	</script>
+</body>
+</html>
+<!--jQuery es un gran objeto Javascript, usa el $(selector)
+	jQuery utiliza los selectores CSS
+	hide y show para mostrar la tabla
+	$("#tabla").hide();	-->
