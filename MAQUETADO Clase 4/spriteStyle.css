@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+/*---Reset---*/
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	font-family: 'Sofia', cursive;
+}
+/*---Header---*/
+header{
+	width: 100%;
+	height: 150px;
+	background: lightblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+#contenedor{
+	width:100%;
+	display: flex;
+	justify-content: center; 
+
+}
+#contenedor div{
+	width: 200px;
+	height: 200px;
+	background-color: lightpink;
+ 	padding: 20px;
+ 	margin-top: 10px;
+ 	margin-left: 10px;
+ 	overflow: auto/*visible (por defecto), hideen, scroll, o auto
+ 					- si uso hidden me OCULTA el excedente 
+ 					- si trabajamos con imagenes podemos usar el valor hidden, para generar máscaras de recorte
+ 					- scroll me genera las barras de movimiento arriba y abajo
+ 					- auto me genera la barra de movimiento automaticamente al costado derecho*/
+
+}
+
+#mascara{
+	width:100px;
+	height:100px;
+	border: 2px solid #333;
+	overflow: hidden;
+	resize: horizontal; /*none - auto - resize - horizontal - vertical*/
+	/*le permite al usuario modificiar el tamaño de caja*/
+}
+
+/*-----Mascara Redes----*/
+#redes{
+	display:flex;
+	justify-content: center;
+}
+#redes div{
+	width: 53px;
+	height: 53px;
+	/*border: 1px solid #333;*/
+	background-image: url('redes.png');
+	background-position: -231px -21px;/*modificamos la posicion de la imagen de fondo*/
+	/*background-size: modifica el tamaño de imagen */
+}
+
+#redes #fb{
+	background-position: -59px -21px;
+}
+
+#redes #gl{
+	background-position: -118px -21px;
+}
+
+#redes #tw{
+	background-position: -231px -21px;
+}
+
+#redes #fb:hover{
+	background-position: -59px -77px;
+}
+
+#redes #gl:hover{
+	background-position: -118px -77px;
+}
+
+#redes #tw:hover{
+	background-position: -231px -77px;
+}
+/*-231px -21px*/
