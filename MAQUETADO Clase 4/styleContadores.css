@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+body{
+	font-family: 'Merriweather', serif;
+	font-style: #333;
+	background-color: lightpink;
+}
+
+/*-----------H1 H2 Y H3-----------*/
+h1{
+	counter-increment: capitulo; /*para inicializar mi contador*/
+	counter-reset: subCapitulo; /*frena o resetea el contador*/
+}
+
+h2{
+	counter-increment: subCapitulo;
+	counter-reset: subSubCapitulo;
+}
+
+h3{
+	counter-increment: subSubCapitulo;
+}
+
+h1:before{
+	content: 'CAPÍTULO ' counter(capitulo); /*definir el contador*/
+}
+h2:before{
+	content: 'SUBCAPÍTULO ' counter(subCapitulo)  ' del CAPÍTULO ' counter(capitulo)
+}
+h3:before{
+	content: 'SUB SUBCAPÍTULO ' counter(subSubCapitulo) ' del SUBCAPÍTULO ' counter(subCapitulo);
+}
+
+/*-----------UL Y LI-----------*/
+ul{
+	counter-reset: item;
+}
+li{
+	counter-increment:  item;
+}
+
+li:before{
+	content: 'Item 0' counter(item);
+}
+/*Funciones en CSS predefinidas
+	-counter ()*/

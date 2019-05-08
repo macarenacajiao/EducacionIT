@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+	<meta charset="utf-8">
+	<title>Before y After</title>
+	<style>
+		/*no funciona sin content*/
+		h3:before{
+			content: 'BEFORE';/*texto - imagen url (ruta de imagen) - funcion counter()
+			para dar ancho y alto necesito display block o inline block*/
+			display: inline-block;
+			background-image: url('rutaImg.jpg');
+			background-size:100%;
+			width:200px;
+			height: 40px;
+			color: red;
+			background: black;
+		}
+		p:after{
+			content: 'AFTER: Ver más...';
+			padding: 3px;
+			background-color: green;
+			color: white;
+			cursor: pointer; /* cambia el cursos del mouse: pointer, copy, progress fijarse en mdn web docs para más info*/  
+		} 
+	</style>
+</head>
+<body>
+	<main>
+		<h3>Título 00</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<h3>Título 01</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</main>
+</body>
+</html>
