@@ -1,0 +1,29 @@
+div{
+	width:200px; 
+	height:200px;
+	border:1px solid lightgrey;
+}
+#caja-01{
+	position: static;
+	background-color: lightgreen;
+	top:10px;
+	left:10px;
+}
+#caja-02{
+	position: relative;
+	background-color: lightblue;
+	top:-110px;
+	left:200px;
+}
+#caja-03{
+	position: absolute;
+	background-color: lightyellow;
+	top:200px;
+	left:200px;
+}
+#caja-04{
+	position: fixed;
+	background-color: lightpink;
+	top:10px;
+	left:10px;
+}
