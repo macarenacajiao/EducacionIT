@@ -1,0 +1,23 @@
+/* Selectores Avanzados */
+	/*
+	#Selector grupal: selector1, selector2 {Propiedad:Valor;}
+
+	#Selector descendente: Selecciona los elementos que se encuentran dentro de otros elementos.
+	Selector1 Selector2 {Propiedad:Valor;}
+
+	#Selector De etiqueta y clase:
+
+	Selector1.Clase{Propiedad:Valor;} -> Elementos del tipo Selector1 con la clase .Clase
+
+	Selector1 .Clase{Propiedad:Valor;} Todos los elementos que esten dentro de Selector1 con la clase .Clase
+
+	#Selector de Hijos: SelectorPadre > SelectorHijo{Propiedad:Valor;}
+
+	#Selector Adyacente o de hermanos:	selecciona elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos. 
+
+	Selector1 + Selector2 {Prpiedad:Valor;}
+
+	#Selectores de Atributos: [nombre_atributo]{Propiedad:Valor;}
+	[nombre_atributo=valor]{Propiedad:Valor;}
+
+	*/
