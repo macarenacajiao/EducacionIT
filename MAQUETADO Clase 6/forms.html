@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+        table{
+            border: solid 1px #333;
+            width: 50%;
+            border-collapse: collapse;/*hace que el espacio que se genera en el medio, el valor x defecto esta en separate*/
+            font-family: 'Roboto Mono', monospace;
+
+        }
+        tr{
+            background: lightpink;
+            height: 40px; /*el alto se trabaja desde la tr*/
+            border: solid 1px #333;
+        } /*para trabajar generalizando seleccionamos el tr*/ 
+        th, td{
+            border: solid 1px #333;/*le pone bordes a todo*/
+        }
+        tbody tr:hover{
+            background: hotpink;
+            cursor: pointer;
+        }
+        thead tr{
+            background: lightblue;
+            color: white;
+        }
+        /*Estilos de formulario*/
+        form{
+            width: 50%;
+            font-family: 'Roboto Mono', monospace;
+        }
+        label{
+            display:block;
+        }
+        input{
+            width: 300px;
+            height: 40px;
+        }
+        input:focus{
+            border: 1px solid lightblue;
+            background: rgba(192, 181, 181, 0.26);
+        }
+        input:valid{
+            background: lightblue;
+        }
+        input:invalid{
+            background: lightpink;
+        }
+        input:placeholder-shown{
+            font-family: 'Roboto Mono', monospace;
+        }
+        select, textarea{width: 300px; height: 100px; font-family: 'Roboto Mono', monospace;}
+        textarea{
+            resize: none;
+        }
+        fieldset{
+            border: 3px solid lightpink;
+        }
+        legend{
+            text-transform: uppercase;
+        }
+        button{
+            background: lightblue;
+            border: 1px solid lightblue;
+            color: #333;
+            padding: 13px;
+            cursor: pointer;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <!---encabezado de tabla-->
+        <!--colspan para fusion de columnas, rowspan para fusion de filas-->
+        <thead>
+            <tr>
+                <!-- th equivale a un header 1, 2, 3, 4 es un dato de tabla pero con caracter de titulo-->
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <!--cuerpo de tabla-->
+            <tr>
+                <td>Laura</td>
+                <td>Gomez</td>
+                <td>27</td>
+                <td>mail@mail.com</td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td>Martinez</td>
+                <td>35</td>
+                <td>mail@mail.com</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Lopez</td>
+                <td>22</td>
+                <td>mail@mail.com</td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+    <form>
+        <!--no validate es para bootstrap, trabaja con una validacion distinta-->
+        <!--marca un grupo de datos de formulario-->
+        <fieldset>
+            <legend>Datos personales</legend>
+            
+            <label for="nombre">Nombre:</label><!--le da sentido al dato, por cada input hay un label-->
+            <input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre" required> 
+            
+            <label for="apellido">Apellido:</label>
+            <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido" required pattern="[a-zA-Z0-9]+">
+            
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Ingrerse su email" required>
+            
+            <label for="edad">Edad:</label>
+            <input id="edad" type="number" name="edad" required>
+        </fieldset>
+        <fieldset>
+            <legend>Comentarios</legend>
+            <label for="origen">País de Origen</label>
+            <select name="origen" id="origen">
+                <option value="ar">Argentina</option>
+                <option value="br">Brasil</option>
+                <option value="ur">Uruguay</option>
+            </select>
+            <label for="">Comentario:</label>
+            <textarea minlength="2" maxlength="25" name="comentario" id="comentario"></textarea>
+        </fieldset>
+        <!--<input type="submit" value="Enviar">-->
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
