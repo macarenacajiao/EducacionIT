@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+*{box-sizing: border-box;}
+body {margin: 0; font-size:16px; font-family: 'Rubik', sans-serif;}
+header{
+    width: 1005;
+    height: 100px;
+    line-height: 100px;
+    background: #ccc;
+    text-align: center;
+}
+header h1{margin:0;}
+main{
+    width: 90%;
+    margin: auto;
+}
+main #contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+main #contenedor div{
+    width: 200px;
+    height: 300px;
+    background: tomato;
+    padding: 10px;
+    margin-right: 10px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    background: #333;
+}
+/*Responsive*/
+@media (max-width: 700px){
+    main #contenedor{
+        flex-direction: column; /*esto redirecciona la ubicación del flex*/
+    }
+    main #contenedor div{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        background: lightblue;
+    }
+}
+@media (orientation:portrait){
+
+}
+@media (orientation:portrait){
+    
+}
+/*portrait vertical o landscape horizontal*/
+/*min o max width
+    serían todos los dispo hasta 700px (tablets o celulares)*/
