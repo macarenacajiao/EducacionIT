@@ -1,5 +1,6 @@
 class Producto{
-    constructor(title, thumbnail, price){
+    constructor(id, title, thumbnail, price){
+        this.id = id;
         this.title = title;
         this.thumbnail = thumbnail;
         this.price = price; 
@@ -15,7 +16,7 @@ class Producto{
                 <br>
                 ${this.title} ($${this.price})
                 <br>
-                <button> Me gusta +1</button>
+                <button data=${this.id}>Me gusta +1</button>
             </div>
         `
     }
