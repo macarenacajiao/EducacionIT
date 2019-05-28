@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Observer</title>
+  </head>
+  <body>
+    <input type="text" name="txt" value="">
+    <p></p>
+    <script>
+      //Observer
+      class Observable {
+        constructor(){
+          this.observers = [];
+        }
+
+        subscribe(f){
+          this.observers.push(f);
+        }
+
+        unsubscribe(f){
+          this.observers = this.observers.filter(ob => ob !== f);
+        }
+
+        notify(data){
+          this.observers.forEach(f=>f(data));
+        }
+      }
+
+      //Utilizo el observable
+      const input = document.querySelector("input");
+
+      //Creo el Observable
+      const inputObserver = new Observable();
+
+      //Esta accion la preparo para ejecutarse cuando suceda el evento
+      const updateText = text => document.querySelector("p").innerHTML = text;
+
+      //subscribe
+      inputObserver.subscribe(updateText);
+
+      //Disparo el notify cuando el usuario teclea
+      input.addEventListener("keyup", (e)=>inputObserver.notify(e.target.value));
+
+    </script>
+  </body>
+</html>

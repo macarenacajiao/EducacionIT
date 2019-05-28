@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Module</title>
+  </head>
+  <body>
+    <script>
+      //Module, me permite proteger codigo a la vez que retorno un acceso "publico"
+      let myModule = (function(){
+        //Singleton, control de recursos compartidos
+        let instance = undefined;
+
+        function createInstance(){
+          const object = new Object("Soy uno solo!");
+          return object;
+        }
+
+        function getInstance(){
+          if(!instance){
+            instance = createInstance();
+          }
+          return instance;
+        }
+
+        //Retorno un objecto con los punteros a las funciones que quiero hacer "publicas"
+        return {
+          getInstance
+        }
+
+      })()
+
+      // Llamo al modulo
+      const inst1 = myModule.getInstance();
+    </script>
+  </body>
+</html>

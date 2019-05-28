@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Singleton</title>
+  </head>
+  <body>
+    <script>
+      //Singleton, control de recursos compartidos
+      let instance = undefined;
+
+      function createInstance(){
+        const object = new Object("Soy uno solo!");
+        return object;
+      }
+
+      function getInstance(){
+        if(!instance){
+          instance = createInstance();
+        }
+        return instance;
+      }
+
+      /////aplico el patron. inst1, inst2 son el mismo objeto. Apuntan al mismo espacio en memoria
+      const inst1 = getInstance();
+      inst1.id = 10;
+      const inst2 = getInstance();
+      console.log(inst2.id);
+
+      console.log("Son iguales?", inst1 === inst2);
+    </script>
+  </body>
+</html>
