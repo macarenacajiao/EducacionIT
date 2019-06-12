@@ -1,0 +1,76 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para padding y border*/
+}
+html {
+    height: 100%; /*la altura de los elementos se esta calculando en base al contenedor*/
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient( to bottom right, pink, hotpink);
+    /*background-image: radial-gradient(circle,hotpink, pink);*/
+    /*background-repeat: no-repeat;
+    display: flex;  
+    justify-content: center;
+    align-items: center;*/
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out; /**/
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    /*box-shadow: 3px 3px 16px 1px rgba(0,0,0, 0.5);*/
+}
+
+div:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/*Gradientes lineales: linear-gradient(color[cant%], color[cant%], color[cant%])
+                 radiales: radial-gradient()
+    Dirección de gradientes lineales: to right, left
+                                      to bottom, to top
+    Centro de circunferencia de gradientes radiales: at top right
+                                      at bottom right
+                                      at top left
+                                      at bottom left 
+    RESETEO
+    * : selector universal
+    normalize.css
+    
+    COLORES
+    hsl(0-360deg hue|0-100% saturation|0-100% lightness)
+    hsla(0-360deg hue|0-100% saturation|0-100% lightness|canal alpha 0 a 1, pasando por todos los decimales)
+
+    SOMBRAS
+    box-shadow : desX desY blur spread color tipo;
+
+    TRANSICIONES: Forma de describir como una caja puede pasar entre un estado A y B
+
+    transition: regla|all y si no es el caso... uso la coma , y sigo|delay|timing-function;
+    transition-property
+    transition-duration milisegundos o segundos
+    transition-delay
+    transition-timing-function: ease in, empieza lento termina rapido|ease out, empieza rapido temrina lento|ease-in-out toma rapidez en el medio|ease|cubic-bezier()
+
+    ANIMACIONES: Conjunto de puntos para mutar una caja. No necesariamente tienen que estar involucadras las reglas de transform o transition
+
+    TRANSFORMACIONES: Mutaciones que se aplican a una caja y que no afectan al resto del layout adyacente
+    -webkit-transform
+    -o-transform
+    -moz-transform
+    translate|translateX|translateY|translateZ|translate3d
+    Valores: translate (), skew(skewX,skewY), scale(usa nums enteros, y decimales), rotate()
+    
+
+
+    alt+shift+a para comentar*/
