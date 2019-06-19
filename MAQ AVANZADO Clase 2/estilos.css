@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body { 
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*
+    perspective : determina la distancia desde la cual apreciamos el/los elementos . No se lo podemos aplicar al/los elementos que queremos transformar tridimencionalmente sino a aquel que lo/s contiene/n
+    */
+    perspective: 800px;
+}
+
+#rojo {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(30deg);
+    /*
+    transform-style : Nos sirve para determinar si los elementos hijos de otro elemento que ya hereda perspectiva tienen que mantener exactamente ese mismo espacio tridimencional y no crear otro nuevo
+    */
+    transform-style: preserve-3d;
+}
+
+#amarillo {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: auto;
+    transform: rotateY(30deg);
+}

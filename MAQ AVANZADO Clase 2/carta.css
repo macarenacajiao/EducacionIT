@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body { 
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor {
+    width: 215px;
+    height: 300px;
+    perspective: 800px;
+}
+
+#carta {
+    position: relative;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+#contenedor:hover #carta {
+    transform: rotateY(0);
+}
+
+#carta , .lado {
+    width: 100%;
+    height: 100%;
+}
+
+.lado {
+    border-radius: 10px;
+    /*
+        backface-visibility : es la regla que nos permite ocultar la "parte de atras" de un elemento. Sin esta regla no podemos conformar ningun elemento tridimencional que tenga 2 o mas caras ya que al rotarlo siempre se veria la cara superior y su respectivo reverso
+    */
+    backface-visibility: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#frente { 
+    background-image: url("frente.jpg");
+}
+
+#dorso {
+    background-image: url("dorso.png");
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
