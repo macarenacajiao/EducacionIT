@@ -1,0 +1,53 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="animaciones.css">
+    <style >
+    	
+div{
+	width:100px;
+	height:100px;
+	background-color: red;
+
+	animation-name: circle;
+
+	animation-duration: 1s;
+	-webkit-animation-duration:1s;
+
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+
+	animation-direction: 1s;
+	-webkit-animation-direction:alternate;
+
+	animation-delay: 2s;
+	-webkit-animation-delay:2s;
+
+	animation-fill-mode: forwards;
+-webkit-animation-fill-mode:forwards;
+
+
+}
+div:hover {
+	animation-play-state: paused;
+	-webkit-animation-play-state:paused;
+}
+@keyframes circle{
+	from{border-radius: 0}
+	to{border-radius: 50%}
+
+}
+
+@-webkit-keyframes circle{
+	from{border-radius: 0}
+	to{border-radius: 50%}
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+
+</body></html>

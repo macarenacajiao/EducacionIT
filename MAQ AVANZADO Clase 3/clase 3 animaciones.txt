@@ -1,0 +1,51 @@
+
+    /*
+
+    animation : <name> <duration> [<delay> <iteration> <direction> <timing> <fill> <play> ]
+    
+    animation-name: El nombre del keyframe que se quiere ejecutar - required
+
+    animation-duration : La duración total desde el estado inicial al final del keyframe
+
+    animation-iteration-count : La cantidad de veces que un keyframe se va a repetir
+
+    animation-delay : Es el tiempo de demora que tarda un keyframe en arrancar. El delay solo cuenta para la primera iteración de la animación, es decir que las siguientes iteraciones,si hubiera, no van a verse afectadas por esta regla
+
+    animation-timing-function : Es la curva de velocidad de la animación 
+
+    animation-play-state : Indica si la animación esta corriendo en pausa
+
+    animation-direction : Es la forma en la que se van a devolver los keyframes 
+
+    animation-fill-mode : Es la forma en la que se terminan de computar los keyframes sobre el elemento 
+
+
+
+    KEYFRAMES :
+SINTAXIS
+    @keyframes <nombre> {
+
+        from {} : El estado inicial del elemento
+        to {} : El estado final del elemento
+
+        --------------------------------------
+
+        0% {} : Analogo a from{}
+        n% {}
+        100%{} : Analogo a to{}
+
+    }
+
+
+    */
+
+
+
+
+/*
+
+ANIMACIONES : Es la forma de describir multiples transformaciones en un elemento. Una animacion esta compuesta por la regla animation (ó -webkit-animation) y @keyframes 
+
+Los keyframes describen cada uno de los estados de cambio del elemento mientras que la regla animation describe como se evaluan los keyframes en total
+
+*/
